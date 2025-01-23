@@ -98,7 +98,7 @@ def get_slot_owner(channel_id):
 
 @bot.command()
 async def delete(ctx):
-    if discord.utils.get(ctx.guild.roles, id=1229402537648455700) in ctx.author.roles:
+    if discord.utils.get(ctx.guild.roles, id=1330525578008330392) in ctx.author.roles:
         try:
             await ctx.channel.delete()
             await ctx.send("Channel deleted successfully.")
@@ -155,7 +155,7 @@ async def unhold(ctx):
 @bot.command()
 @commands.has_role(int(staff))
 async def add(ctx, member: discord.Member):
-    role = ctx.guild.get_role(1229474713345069199)
+    role = ctx.guild.get_role(1330526753751302215)
     await member.add_roles(role)
     await ctx.send(f"Added role {role.name} to {member.display_name}")
 @bot.command()
@@ -240,7 +240,7 @@ Inactivity For More Than 2 Days Will Result In Removal Of Slot (YOU WILL BE WARN
 @bot.command()
 @commands.has_role(int(staff))
 async def remove(ctx, member: discord.Member):
-    role = ctx.guild.get_role(1229474713345069199)
+    role = ctx.guild.get_role(1330526753751302215)
     if role in member.roles:
         await member.remove_roles(role)
         await ctx.send(f"Removed role {role.name} from {member.display_name}")
@@ -297,9 +297,9 @@ async def create(ctx, member: discord.Member = None, yoyo: int = None, cx=None, 
 
     # Determine the category ID based on the user's choice
     if category.lower() == 'category1':
-        category_id = 1229474371588849745  # Category 1 ID
+        category_id = 1332121326600720458  # Category 1 ID
     else:
-        category_id = 1229474415734034472  # Category 2 ID
+        category_id = 1332124486501400637  # Category 2 ID
 
     if x is None:
         x = member.display_name
@@ -425,7 +425,7 @@ async def ping(ctx, mention: str = None):
 @bot.command()
 async def nuke(ctx):
     # Check if the user has the specified role
-    role = ctx.guild.get_role(1229474713345069199)
+    role = ctx.guild.get_role(1330526753751302215)
     if role and role in ctx.author.roles:
         # Define a predicate to filter messages
         def is_not_bot_embed_message(message):
@@ -447,4 +447,4 @@ async def nuke(ctx):
     else:
         await ctx.send("You do not have permission to use this command.")
         
-bot.run(" paste your bot token from https://discord.com/developers/applications ")
+bot.run("MTMzMjEyNTc0OTU5NTA3ODc0NQ.GI0kGs.wsP59k5htcxMBCE7zZ_kUU0zhdhfIiQrlH-Jzo")
