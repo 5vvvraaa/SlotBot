@@ -15,9 +15,9 @@ bot = commands.Bot(
     intents=discord.Intents.all(),
     status=discord.Status.dnd,
     activity=discord.Activity(
-        type=discord.ActivityType.watching, name="Riza"
+        type=discord.ActivityType.watching, name="Echo Slots"
     ),
-    guild = discord.Object(id=1229389945626693714) # Change it with your guild id right click on your server and copy the server id and paste it instead of 1229389945626693714
+    guild = discord.Object(id=1330525578008330392) # Change it with your guild id right click on your server and copy the server id and paste it instead of 1229389945626693714
 )
 bot.remove_command("help")
 
@@ -33,7 +33,7 @@ async def on_ready():
     ██║░░██║██║███████╗██║░░██║
     ╚═╝░░╚═╝╚═╝╚══════╝╚═╝░░╚═╝
     
-    """ + "\033[0m" + "Made By @codewithriza")
+    """ + "\033[0m" + "Made By @5vra")
     print("Bot is ready!")
 with open("config.json", "r") as file:
     hmm = json.load(file)
